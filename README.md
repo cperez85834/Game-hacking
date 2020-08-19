@@ -28,7 +28,7 @@ This code isn't really intended to be used by anyone but me, so it is more of a 
 3. Send Left/Right click, as well as mousewheel up/down
 
 ## Dll.h:
-### Declares and defines all general purpose functions used within the hack program. This is the meat of the project, and as such it has many functions that are specific to the game such as:
+### Declares and defines all general purpose functions used within the hack program. This is the main part of the project, and as such it has many functions that are specific to the game such as:
 1. Packet encryption/decryption
 2. Pointer initialization
 3. Entity list enumeration
