@@ -1,7 +1,7 @@
 # Game-hacking
 
 # Synopsis
-The purpose of this repository is to keep track of my game hacking projects related to MMOs
+The purpose of this repository is to keep track of my game hacking projects related to MMOs. A lot of this code is based on previous pixel searching bots I made for the same game, but I felt that they were too inefficient and limited. Thus, I created these memory and packet based bots that give me unlimited possibilities as far as automating the game. A lot of the game functions and base pointers were found using a combination of x86dbg and Cheat Engine debugger. The game client, which isn't posted here, also includes a patched in anticheat bypass that was very simple to make by simply following a few function calls in x86. This allows me to have complete control over the game without being kicked out or banned (unless I get caught by a GM that is).
 
 # Motivation
 Ever since I was young I have had a fascination with game hacking; being able to manipulate games to do whatever I want, figure out how they work to exploit them,
