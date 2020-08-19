@@ -40,7 +40,7 @@ This code isn't really intended to be used by anyone but me, so it is more of a 
 2. Encryption table
 
 ## public_mouse/keyboard.h
-### Used for declaring IOTCL commands for communication with our respective drivers
+### Used for declaring IOTCL commands for communication with respective drivers
 
 ## dllmain.cpp
 ### This is where the injection to the game occurs, as well as where the main thread runs
