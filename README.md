@@ -1,7 +1,7 @@
 # Game-hacking
 
 # Synopsis
-The purpose of this repository is to keep track of my game hacking projects.
+The purpose of this repository is to keep track of my game hacking projects related to MMOs
 
 # Motivation
 Ever since I was young I have had a fascination with game hacking; being able to manipulate games to do whatever I want, figure out how they work to exploit them,
