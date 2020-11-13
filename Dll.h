@@ -17,16 +17,12 @@ void timerStart(){
 //Watch timer function, argument is the amount of time in seconds to wait after timerStart() is called before returning true.
 //Useful for waiting for an event without using Sleep()
 bool timerWatch(double duration){
-	//LARGE_INTEGER timerTcounter;
-	//cout << "bup\n";
+
 	QueryPerformanceCounter(&timerTcounter);
-	//cout << "bup\n";
 	timerElapsed = timerTcounter.QuadPart;
-	//cout << "bup\n";
 	if ((timerElapsed - timerInitialTick) / (timerFreq / 1000) >= duration * 1000){
 		return 1;
 	}
-	//cout << "bup\n";
 	return 0;
 }
 
