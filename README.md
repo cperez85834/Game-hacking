@@ -8,7 +8,7 @@ Ever since I was young I have had a fascination with game hacking; being able to
 add new features or automate the boring parts is something that is exciting for me.
 
 # Installation/Usage
-This code isn't really intended to be used by anyone but me, so it is more of a demonstration of what I have accomplished.
+This code isn't really intended to be used by anyone but me, so it is more of a demonstration of what I have accomplished. Because of this, a lot of this code may not be properly documented as it requires a detailed description of my reverse engineering efforts
 
 # Description of files
 
