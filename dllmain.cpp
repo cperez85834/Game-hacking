@@ -32,57 +32,11 @@ DWORD WINAPI MainThread(LPVOID param) {
 	cin >> SLOW;
 	getchar();
 
-	//while (1){ Test function for trying to inject input via Windows SendMessage/PostMessage functions.
-		//HWND fiesta = FindWindowW(NULL, L"FiestaOnline");
-		//HWND innerfiesta = GetWindow(fiesta, GW_CHILD);
-		//cout << hex << fiesta << "\t" << innerfiesta << endl;
-		//getchar();
-		//SendMessage(fiesta, WM_PARENTNOTIFY, WM_LBUTTONDOWN, 0x02630325);
-		//EnumChildWindows(innerfiesta, EnumChildProc, 0);
-		/*while (1){
-			SendMessage(fiesta, WM_PARENTNOTIFY, WM_LBUTTONDOWN, 0x00C301A7);
-			SendMessage(fiesta, WM_MOUSEACTIVATE, (WPARAM)fiesta, MAKELPARAM(HTCLIENT, WM_LBUTTONDOWN));
-			SendMessage(innerfiesta, WM_MOUSEACTIVATE, (WPARAM)fiesta, MAKELPARAM(HTCLIENT, WM_LBUTTONDOWN));
-			SendMessage(innerfiesta, WM_SETCURSOR, (WPARAM)innerfiesta, MAKELPARAM(HTCLIENT, WM_LBUTTONDOWN));
-			PostMessage(innerfiesta, WM_LBUTTONDOWN, MK_LBUTTON, 0x00C301A7);
-			//SendMessage(innerfiesta, WM_MOUSEACTIVATE, (WPARAM)innerfiesta, MAKELPARAM(HTCLIENT, WM_LBUTTONDOWN));
-			SendMessage(innerfiesta, WM_SETCURSOR, (WPARAM)innerfiesta, MAKELPARAM(HTCLIENT, WM_LBUTTONUP));
-			PostMessage(innerfiesta, WM_LBUTTONUP, 0, 0x00C301A7);
-			//SendMessage(innerfiesta, WM_SETCURSOR, (WPARAM)innerfiesta, MAKELPARAM(HTCLIENT, WM_MOUSEMOVE));
-			//PostMessage(innerfiesta, WM_MOUSEMOVE, 0, 0x02630325);
-			//Sleep(500);
-			//LOLCLICKDINPUTSHIT = true;
-			Sleep(100);
-		}*/
-		//SendMessage()
-		/*MoveMouseRelative(1, 0, file_mou);
-		Sleep(500);
-		MoveMouseRelative(0, -1, file_mou);
-		Sleep(500);
-		MoveMouseRelative(-1, 0, file_mou);
-		Sleep(500);
-		MoveMouseRelative(0, 1, file_mou);
-		getchar();
-		Sleep(3000);*/
-	//}
-
 	cout << "healbot?";
 	cin >> is_healbot;
 	getchar();
 	if (is_healbot == '1'){
 		healBot();
-	}
-	POINT wow;
-	while (1){
-		GetCursorPos(&wow);
-		//cout << "X: " << *reinterpret_cast<float*>(playerX) << "\tY: " << *reinterpret_cast<float*>(playerY) << "\tZ: " << *reinterpret_cast<float*>(playerZ) << endl;
-		//cout << "X: " << (*playerX) << "\tY: " << (*playerY) << "\tZ: " << (*playerZ) << endl;
-		cout << "Mouse Coordinates:\tX:" << wow.x << "\t" << wow.y << endl;
-		/*if (mapSwitch == true){
-			cout << "Map switched successfully!\n";
-			mapSwitch = false;
-		}*/
-		Sleep(1000);
 	}
 
 	cout << "CHAR CLASS?? (0 = cleric, 1 = crus)";
@@ -91,18 +45,8 @@ DWORD WINAPI MainThread(LPVOID param) {
 
 	cout << "Jump in game first to get socket\n";
 	while (sendSocket_r == 0) Sleep(1000);
-	//cout << "Invite Socket is : " << hex << sendSocket_Invite << endl;
 	//getchar();
 	Sleep(2000);
-
-	/*while (1){
-		cout << "TargetofTargetID is: " << hex << *(WORD*)targetofTargetID << endl;
-		Sleep(1000);
-	}*/
-
-	char kkpJoin[7] = { 0x06, 0x05, 0x58, 0x10, 0x07, 0x00, 0x00 };
-
-	ZombieFarm();
 
 	initialX = *playerX;
 	initialY = *playerY;
@@ -111,33 +55,7 @@ DWORD WINAPI MainThread(LPVOID param) {
 	int mobID[20] = { 0 };
 	int optionalMobID[20] = { 0 };
 
-	//mage
-	mobID[0] = 71;
-	mobID[1] = 786;
-	mobID[2] = 788;
-	//mobID[3] = 2030;
-	//mobID[4] = 4522;
-	//mobID[5] = 4523;
-	//mobID[6] = 4524;
-	//mobID[7] = 4525;
-	//mobID[8] = 4526;
-	//mobID[9] = 5129;
-
-	optionalMobID[0] = 83;
-	optionalMobID[1] = 787;
-	optionalMobID[2] = 789;
-	optionalMobID[3] = 2031;
-	//optionalMobID[4] = 779;
-	//optionalMobID[5] = 781;
-	//optionalMobID[6] = 2029;
-	//optionalMobID[7] = 716;
-	//optionalMobID[8] = 719;
-	//optionalMobID[9] = 77;
-	//optionalMobID[10] = 717;
-	//optionalMobID[11] = 720;
-	//optionalMobID[12] = 2024;
-
-	/*//CRUS BOT 1
+	//CRUS BOT 1
 	mobID[0] = 4546;
 	mobID[1] = 4547;
 	mobID[2] = 4548;
@@ -160,58 +78,8 @@ DWORD WINAPI MainThread(LPVOID param) {
 	//optionalMobID[9] = 77;
 	//optionalMobID[10] = 717;
 	//optionalMobID[11] = 720;
-	//optionalMobID[12] = 2024;*/
+	//optionalMobID[12] = 2024;
 
-	//CRUS BOT 2
-	/*mobID[0] = 4500;
-	mobID[1] = 4501;
-	mobID[2] = 4502;
-	mobID[3] = 4503;
-	mobID[4] = 4504;
-	mobID[5] = 4510;
-	mobID[6] = 4511;
-	mobID[7] = 4512;
-	mobID[8] = 4513;
-
-	//optionalMobID[0] = 4550;
-	//optionalMobID[1] = 4551;
-	//optionalMobID[2] = 4552;
-	//optionalMobID[3] = 4553;
-	//optionalMobID[4] = 765;
-	//optionalMobID[5] = 765;
-	//optionalMobID[6] = 731;
-	//optionalMobID[7] = 716;
-	//optionalMobID[8] = 719;
-	//optionalMobID[9] = 77;
-	//optionalMobID[10] = 717;
-	//optionalMobID[11] = 720;
-	//optionalMobID[12] = 2024;*/
-
-	//CLERIC
-	/*mobID[0] = 561;
-	mobID[1] = 875;
-	mobID[2] = 876;
-	//mobID[3] = 827;
-	//mobID[4] = 4558;
-	//mobID[5] = 4559;
-	//mobID[6] = 4560;
-	//mobID[7] = 4561;
-	//mobID[8] = 4562;
-
-	optionalMobID[0] = 544;
-	optionalMobID[1] = 847;
-	optionalMobID[2] = 848;
-	optionalMobID[3] = 541;
-	optionalMobID[4] = 840;
-	optionalMobID[5] = 842;
-	//optionalMobID[6] = 65;
-	//optionalMobID[7] = 772;
-	//optionalMobID[8] = 776;
-	//optionalMobID[9] = 330;
-	//optionalMobID[10] = 744;
-	//optionalMobID[11] = 745;*/
-
-	//Console();
 	cout << "char class is " << char_class << endl;
 	enableDropTrack = true;
 	while (1){
@@ -255,16 +123,13 @@ DWORD WINAPI MainThread(LPVOID param) {
 		}
 		if (char_class == 0) checkBuff(false);
 		checkQuests();
-		//if(char_class == 0) mobESPGrind(mobID, optionalMobID);
-		//cout << "weee";
 		if (char_class == 1){
-			mobESPGrind_Mage(mobID, optionalMobID);//mobESPGrind_Crus(mobID, optionalMobID);
+			mobESPGrind_Mage(mobID, optionalMobID);
 			if (LOOTTRAVEL == true){
 				TravelTo(TRAVELX, TRAVELY);
 				LOOTTRAVEL = false;
 			}
 		}
-		//if (char_class == 1) mobESPGrind_Crus(mobID, optionalMobID);
 		if (GetAsyncKeyState(VK_F1)){
 			Sleep(1000);
 			while (1){
